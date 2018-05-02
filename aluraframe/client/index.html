@@ -10,7 +10,7 @@
 <body class="container">
     
     <h1 class="text-center">Negociações</h1>
-    
+    <div id="mensagem"></div>
     <form class="form" onsubmit="negociacaoControler.adiciona(event)">
         
         <div class="form-group">
@@ -35,7 +35,7 @@
         <button class="btn btn-primary text-center" type="button">
             Importar Negociações
         </button>
-        <button class="btn btn-primary text-center" type="button">
+        <button onclick="negociacaoControler.apaga()" class="btn btn-primary text-center" type="button">
             Apagar
         </button>
     </div> 
@@ -45,13 +45,17 @@
     <div id="table"></div>
     
 </body>
+<script src="./js/app/view/View.js"></script>
 <script src="./js/app/models/Negociacao.js"></script>
 <script src="js/app/controllers/NegociacaoControllers.js"></script>
 <script src="js/app/controllers/ListaNegociacoes.js"></script>
 <script src="./js/app/hellpers/DateHelper.js"></script>
 <script src="./js/app/view/TableView.js"></script>
+<script src="./js/app/models/Mensagem.js"></script>
+<script src="./js/app/view/MensagemView.js"></script>
 <script>
     let negociacaoControler = new NegociacaoController();
+    console.log(mensagem)
 
 </script>
 </html>
